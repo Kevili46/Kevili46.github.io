@@ -1,0 +1,358 @@
+@import 'reset.css';
+@import 'fonts.css';
+@import 'animations.css';
+
+:root {
+    --m-font: #202124;
+    --m-yellow: #fbbc05;
+    --m-red: #ea4335;
+    --m-blue: #4285f4;
+    --m-green: #34a853;
+    --m-darkblue: #185abc;
+    --m-gray: #929292;
+    --m-midgray: #dadce0;
+    --m-lightgray: #f8f9fa;
+}
+
+html {
+    position: relative;
+    font-size: 12px;
+    color: var(--m-font);
+}
+
+@media (min-width: 769px) {
+
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    display: none;
+}
+
+.loaded {
+    display: block;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 8vw;
+    text-align: center;
+    letter-spacing: -.5px;
+    line-height: 1.2em;
+    max-width: 1070px;
+    margin-inline: 10%;
+    margin-bottom: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 300;
+    text-align: center;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.yellow {
+    fill: var(--m-yellow);
+    color: var(--m-yellow);
+
+}
+
+.red {
+    fill: var(--m-red);
+    color: var(--m-red);
+}
+
+.blue {
+    fill: var(--m-blue);
+    color: var(--m-blue);
+}
+
+.green {
+    fill: var(--m-green);
+    color: var(--m-green);
+}
+
+.custom-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+    max-width: 1070px;
+    margin-inline: 10%;
+}
+
+.btn {
+    text-decoration: none;
+    text-align: center;
+    border-radius: .3em;
+    transition: color 100ms, background-color 200ms, box-shadow 200ms ease;
+    padding: .5em 1em;
+}
+
+.cta {
+    background-color: var(--m-blue);
+    color: white;
+    padding: .7em 1.3em;
+    margin: .6em;
+    width: auto;
+}
+
+.cta:hover {
+    background-color: #1654b2;
+    box-shadow: 0 .1em .2em var(--m-gray);
+}
+
+.btn-secondary {
+    color: var(--m-blue);
+    border: .1em solid var(--m-midgray);
+}
+
+.btn-secondary:hover {
+    border-color: var(--m-blue);
+    color: var(--m-darkblue);
+    background-color: var(--m-lightgray);
+}
+
+.btn-secondary:active {
+    background-color: var(--m-blue);
+    color: white;
+    transition: 0ms;
+}
+
+.logo-word {
+    height: auto;
+    transition: 150ms ease;
+    margin: 1em;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4vw;
+    }
+
+    .custom-section {
+        margin-bottom: 6em;
+    }
+}
+
+/* --------------------- HEADER --------------------- */
+
+header {
+    position: static;
+    top: -64px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 0em;
+    transition: 300ms ease;
+}
+
+/* --------------------- LOGO --------------------- */
+
+.logo-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container .logo-word {
+    width: 80px;
+}
+
+.sign-up {
+    font-size: 14px;
+    margin: 18px;
+}
+
+/* --------------------- FLOATING HEADER --------------------- */
+
+.floating-h {
+    position: sticky;
+    box-shadow: 0 0em .2em var(--m-gray);
+    z-index: 101;
+    background-color: white;
+}
+
+/* --------------------- MAIN --------------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission {
+    height: 11em;
+    position: relative;
+}
+
+.mission h3 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.big-img {
+    border-radius: .5em;
+    max-width: 100%;
+    margin-bottom: 1.5em;
+    aspect-ratio: 1.794;
+}
+
+.wider {
+    max-width: 1300px;
+    margin-inline: 5%;
+}
+
+/* --------------------- SECTION 1 / SPHERE --------------------- */
+
+.sphere-container {
+    position: relative;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#m-sphere {
+    height: auto;
+    z-index: 1;
+    width: clamp(12.5em, 90%, 30em);
+    transition: 150ms ease;
+}
+
+#m-shadow {
+    position: absolute;
+    z-index: -1;
+    width: clamp(12.5em, 90%, 30em);
+    transition: 150ms ease;
+}
+
+.m-under-sphere {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    gap: 2em;
+}
+
+.m-under-sphere .logo-word {
+    width: 60%;
+}
+
+#m-logo {
+    width: clamp(2em, 40%, 6em);
+    height: auto;
+    overflow: visible;
+    transition: 150ms ease;
+    opacity: 0;
+}
+
+.rolling #m-logo {
+    opacity: 1;
+}
+
+.roll-start .m-under-sphere {
+    opacity: 1;
+}
+
+/* --------------------- SECTION 2 / STRENGTHS --------------------- */
+
+.m-qualities {
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-strength {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strength-img {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.m-strength :is(img, video) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .5em;
+}
+
+.m-strength img {
+    opacity: .95;
+    position: absolute;
+}
+
+.play img {
+    z-index: -1;
+}
+
+.strength-img:hover .play-button {
+    background-color: var(--m-gray);
+}
+
+.play-link {
+    font-weight: 400;
+    color: var(--m-blue);
+    transition: 200ms ease;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.play-link:hover {
+    color: #1654b2;
+}
+
+/* --------------------- SECTION 3 / EXPLANATIONS --------------------- */
+
+.explanation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.explanation>article {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.explanation>article img {
+    max-width: 100%;
+    border-radius: .5em;
+}
+
+/* --------------------- SECTION 4 / CTA --------------------- */
+
+.btn-followed {
+    margin-bottom: 36px;
+}
+
+/* --------------------- FOOTER --------------------- */
+
+footer {
+    background-color: var(--m-lightgray);
+    height: 300px;
+}
+
+/* --------------------- EFFECTS --------------------- */
