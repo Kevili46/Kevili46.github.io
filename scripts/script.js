@@ -1,6 +1,12 @@
 const header = document.getElementsByTagName('header')[0];
 const sphereCont = document.getElementsByClassName('sphere-container')[0];
 
+const deviceInteract = 'click';
+window.addEventListener('touchstart', () => {
+    deviceInteract = 'touchend';
+});
+
+
 //variables for handling scroll direction
 let lastScrollTop = 0;
 let scrollDown = false;
@@ -15,7 +21,6 @@ let sphereMvmtStart = 0;
 // variables for play video on hover ------------
 const strengths = document.getElementsByClassName('strength-img');
 const strengthsVis = document.getElementsByClassName('play-link');
-
 
 // ------------ EventListener for window ------------ 
 
@@ -39,7 +44,7 @@ window.addEventListener('scroll', () => {
 // ------------ EventListener for strength images ------------ 
 
 for (let i = 0; i < strengths.length; i++) {
-    strengthsVis[i].addEventListener('click', () => {
+    strengthsVis[i].addEventListener(deviceInteract, () => {
         if (!strengths[i].classList.contains('play')) {
             strengths[i].classList.add('play');
             strengthVid = strengths[i].getElementsByTagName('video')[0];
