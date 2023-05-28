@@ -66,7 +66,7 @@ function checkScroll() {
 function checkScrollDown() {
     if (window.pageYOffset > lastScrollTop) {
         scrollDown = true;
-    } else if (window.pageYOffset < lastScrollTop) {
+    } else if (window.pageYOffset <= lastScrollTop) {
         scrollDown = false;
     }
     lastScrollTop = window.pageYOffset;
