@@ -2,9 +2,6 @@ const header = document.getElementsByTagName('header')[0];
 const sphereCont = document.getElementsByClassName('sphere-container')[0];
 
 const deviceInteract = 'click';
-window.addEventListener('touchstart', () => {
-    deviceInteract = 'touchend';
-});
 
 
 //variables for handling scroll direction
@@ -29,6 +26,10 @@ window.addEventListener('load', () => {
     sphereMvmtStart = sphereCont.getBoundingClientRect().top + window.pageYOffset - (sphereCont.offsetHeight / 1.2);
     rollSphereAway();
 
+});
+
+window.addEventListener('touchstart', () => {
+    deviceInteract = 'touchend';
 });
 
 window.addEventListener('resize', () => {
@@ -66,14 +67,15 @@ function checkScroll() {
 function checkScrollDown() {
     if (window.pageYOffset > lastScrollTop) {
         scrollDown = true;
-    } else if (window.pageYOffset <= lastScrollTop) {
+    } else if (window.pageYOffset <= lastScrollTop && window.pageYOffset + window.innerHeight < document.body.offsetHeight) {
         scrollDown = false;
+    } else {
+        scrollDown = true;
     }
     lastScrollTop = window.pageYOffset;
 }
 
 function makeHeaderFloating() {
-
     if (window.pageYOffset > 64 && !header.classList.contains('floating-h')) {
         header.classList.add('floating-h');
     }
