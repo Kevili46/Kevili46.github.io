@@ -313,6 +313,7 @@ main {
 .strength-img {
     position: relative;
     margin-bottom: 2em;
+    display: none;
 }
 
 .m-strength :is(img, video) {
