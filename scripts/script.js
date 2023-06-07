@@ -1,7 +1,9 @@
 const header = document.getElementsByTagName('header')[0];
 const sphereCont = document.getElementsByClassName('sphere-container')[0];
 
-const deviceInteract = 'click';
+const scrollBtn = document.getElementById('scroll-down-btn');
+
+let deviceInteract = 'click';
 
 
 //variables for handling scroll direction
@@ -40,6 +42,16 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
     checkScroll();
     rollSphereAway();
+});
+
+// ------------ EventListener for Scroll Down Button ------------ 
+
+scrollBtn.addEventListener(deviceInteract, () => {
+    window.scrollTo({
+        top: scrollBtn.getBoundingClientRect().top + (scrollBtn.offsetHeight / 2) + window.scrollY,
+        left: 0,
+        behavior: 'smooth'
+    });
 });
 
 // ------------ EventListener for strength images ------------ 
@@ -115,8 +127,7 @@ function rollSphereAway() {
 
     if (window.pageYOffset < 1 && sphereCont.classList.contains('roll-start')) {
         sphereCont.classList.remove('roll-start');
-    } else if (window.pageYOffset >= sphereCont.getBoundingClientRect().top / 5 && !sphereCont.classList.contains('roll-away')) {
+    } else if (window.pageYOffset >= sphereCont.getBoundingClientRect().top / 6 && !sphereCont.classList.contains('roll-away')) {
         sphereCont.classList.add('roll-start');
     }
 }
-

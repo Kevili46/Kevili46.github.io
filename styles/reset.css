@@ -15,9 +15,12 @@ tr,
 p {
     line-height: normal;
     border: none;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Product Sans', Helvetica, sans-serif;
     font-size: 1em;
     color: #202124;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
