@@ -7,9 +7,11 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Kevin Seeland" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/utilities.css" />
+    <link rel="stylesheet" href="/styles/style-index.css" />
     <link rel="icon" type="image/x-icon" href="/images/logo/maable-m-logo.svg">
-    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/utilities.js" defer></script>
+    <script src="/scripts/script-index.js" defer></script>
     <title>
         maable | concept for Responsive Webdesign
     </title>
@@ -18,10 +20,46 @@
 <body>
     <!-- HEADER -->
 
-    <header>
-        <a class="logo-container" href="/">
-            <img class="logo-word" src="/images/logo/maable-logo.svg" alt="maable-logo">
-        </a>
+    <header class="mobile-header">
+        <div class="left-header">
+            <!-- MOBILE -->
+            <div class="mobile-section">
+                <button id="burger-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                    </svg>
+                </button>
+                <a class="logo-container" href="/">
+                    <img class="logo-word" src="/images/logo/maable-logo.svg" alt="maable-logo">
+                </a>
+                <div class="mask-html"></div>
+                <div class="logo-and-menu">
+                    <a class="logo-container mobile-logo" href="/">
+                        <img class="logo-word" src="/images/logo/maable-logo.svg" alt="maable-logo">
+                    </a>
+                    <nav class="menu main-menu">
+                        <ul>
+                            <li class="menu-item active-menu"><a href="index.html">Infos</a></li>
+                            <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                            <li class="menu-item"><a href="about.html">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- NORMAL -->
+            <div class="normal-section">
+                <a class="logo-container" href="/">
+                    <img class="logo-word" src="/images/logo/maable-logo.svg" alt="maable-logo">
+                </a>
+                <nav class="menu main-menu">
+                    <ul>
+                        <li class="menu-item active-menu"><a href="index.html">Infos</a></li>
+                        <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                        <li class="menu-item"><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <a href="/" class="btn btn-secondary sign-up">Sign up</a>
     </header>
 
@@ -29,7 +67,7 @@
 
     <main>
         <section class="custom-section mission">
-            <h3>Our belief: When we <span class="blue">build</span> on our <span class="red">strengths</span><br>
+            <h3>Our belief: When we <span class="blue">build</span> on our <span class="red">strengths</span>
                 we
                 <span class="green">achieve</span> the greatest <span class="yellow">results</span>.
             </h3>
@@ -60,48 +98,41 @@
         </section>
 
 
-        <h2>We want to provide the best possible platform to learn and discover</h2>
+        <h2>We want to provide the best possible platform to showcase your skills</h2>
 
         <section class="custom-section">
-            <img class="big-img" src="/images/ideas.jpg" alt="woman thinking">
-            <h3>If there is one thing that should never end, <br>it is ideas and ingenuity</h3>
+            <img class="big-img" src="/images/platform.jpg" alt="woman thinking">
+            <h3>If there is one thing that should never end, it is the will to always move on</h3>
         </section>
 
-        <h2>We can learn from the sphere by interpreting its qualities</h2>
+        <h2 class="strength-h2">We are inspired by the marble because we can transfer its strengths to ourselves</h2>
 
         <section class="custom-section wider">
             <div class="m-qualities">
                 <div class="m-strength" id="curiosity">
-                    <div class="strength-img">
-                        <img src="/images/graphics/curiosity.jpg" alt="">
-                        <video src="/videos/maable_curiosity.mp4"></video>
-                    </div>
+                    <video class="strength-video" src="/videos/maable_curiosity.mp4" type="video/mp4"
+                        poster="/images/graphics/curiosity.jpg" muted playsinline></video>
                     <h3>Movement<br>expresses<br>curiosity</h3>
                     <p class="play-link">Visualize</p>
                 </div>
                 <div class="m-strength" id="continuity">
-                    <div class="strength-img">
-                        <img src="/images/graphics/continuity.jpg" alt="">
-                        <video src="/videos/maable_continuity.mp4"></video>
-                    </div>
+                    <video class="strength-video" src="/videos/maable_continuity.mp4" type="video/mp4"
+                        poster="/images/graphics/continuity.jpg" muted playsinline></video>
                     <h3>Surface<br>embodies<br>continuity</h3>
-                    <p class="play-link">Visualize</p>
+                    <p class=" play-link">Visualize</p>
                 </div>
                 <div class="m-strength" id="adaptability">
-                    <div class="strength-img">
-                        <img src="/images/graphics/adaptability.jpg" alt="">
-                        <video src="/videos/maable_adaptability.mp4"></video>
-                    </div>
+                    <video class="strength-video" src="/videos/maable_adaptability.mp4" type="video/mp4"
+                        poster="/images/graphics/adaptability.jpg" muted playsinline></video>
                     <h3>Shape<br>ensures<br>adaptability</h3>
                     <p class="play-link">Visualize</p>
                 </div>
                 <div class="m-strength" id="joy">
-                    <div class="strength-img">
-                        <img src="/images/graphics/joy.jpg" alt="">
-                        <video src="/videos/maable_joy.mp4"></video>
-                    </div>
-                    <h3>Agility<br>represents<br>joy</h3>
-                    <p class="play-link">Visualize</p>
+                    <video class="strength-video" src="/videos/maable_joy.mp4" type="video/mp4"
+                        poster="/images/graphics/joy.jpg" muted playsinline></video>
+
+                    <h3>Agility<br>emphasizes<br>joy</h3>
+                    <p class=" play-link">Visualize</p>
                 </div>
             </div>
         </section>
@@ -109,7 +140,7 @@
         <section class="custom-section">
             <div class="explanation">
                 <article>
-                    <img src="/images/people.jpg" alt="">
+                    <img src="/images/dancer.jpg" alt="">
                     <h3>All achievements are just the outcome
                         of continuity in our actions</h3>
                 </article>
@@ -126,12 +157,68 @@
 
         <section class="custom-section">
             <img class="big-img" src="/images/circus.jpg" alt="">
-            <h3>From getting help to building strengths to becoming a helper yourself, <br>you can do it all</h3>
+            <h3>From getting help to building strengths to becoming a helper yourself, you can do it all</h3>
         </section>
 
         <section class="custom-section">
-            <h2 class="btn-followed">Let us discover your strengths and develop them together</h2>
+            <h2 class="btn-followed"><span class="unfocus">Start to </span><span class="focus-hover">focus
+                    on</span><span class="unfocus"> your </span><span class="highlight-word">strengths</span><span
+                    class="unfocus"> and build on them with others</span>
+            </h2>
             <a href="/" class="btn cta">Sign up</a>
+        </section>
+
+        <h3 class="testi-intro">Hello, we already achieved great results with Maable</h3>
+        <section class="custom-section testi">
+            <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.12 25.05">
+                <line y1="12.52" x2="40" y2="12.52" stroke-miterlimit="10" stroke-width="3" />
+                <polyline points="28.51 23.98 40 12.52 28.51 1.06" stroke-miterlimit="10" stroke-width="3" />
+            </svg>
+            <div class="testimonials">
+                <article class="testimonial">
+                    <div class="testi-left">
+                        <img class="testi-img" src="/images/cb-s.jpg" alt="">
+                        <p class="testi-date">June 8, 2023</p>
+                    </div>
+                    <div class="testi-right">
+                        <p class="testi-name">Carolina Botelli</p>
+                        <p class="testi-quality">- Web developer</p>
+                        <q class="testi-text">The best thing for me is to teach web development to really interested
+                            people.
+                            I wish I had discovered Maable earlier when I first started. Probably I would have reached
+                            my
+                            goal faster and easier that way.</q>
+                    </div>
+                </article>
+                <article class="testimonial">
+                    <div class="testi-left">
+                        <img class="testi-img" src="/images/aj-s.jpg" alt="">
+                        <p class="testi-date">June 2, 2023</p>
+                    </div>
+                    <div class="testi-right">
+                        <p class="testi-name">André Jordan</p>
+                        <p class="testi-quality">- Musician</p>
+                        <q class="testi-text">Maable is just fantastic. I'm new to music production and was
+                            looking for people to learn from. It was super easy to find them and I keep improving my
+                            skills.</q>
+                    </div>
+                </article>
+                <article class="testimonial">
+                    <div class="testi-left">
+                        <img class="testi-img" src="/images/ml-s.jpg" alt="">
+                        <p class="testi-date">May 29, 2023</p>
+                    </div>
+                    <div class="testi-right">
+                        <p class="testi-name">Matthijs Linden</p>
+                        <p class="testi-quality">- Photoprapher</p>
+                        <q class="testi-text">I was forced to change my profession and therefore chose a career
+                            change as a photographer. I find it enormously important to exchange ideas with others in my
+                            field. It's the only way I stay up to date to guarantee the best results. Maable is the
+                            platform
+                            of choice.</q>
+                    </div>
+                </article>
+
         </section>
 
     </main>
@@ -140,7 +227,7 @@
 
     <footer>
         <section class="socials">
-            <p>Folgen Sie uns</p>
+            <p>Follow us</p>
             <ul class="social-icons">
                 <li>
                     <svg alt="Instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -179,8 +266,21 @@
                 </li>
             </ul>
         </section>
+        <section class="footer-links">
+            <p>More about us</p>
+            <nav class="footer-menu menu">
+                <ul>
+                    <li class="menu-item"><a href="index.html">Infos</a></li>
+                    <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                    <li class="menu-item"><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="legals">
+            <img src="/images/logo/maable-logo-gray.svg" alt="">
+            <p> Kevin Seeland, HFU, Responsive Webdesign, Sommersemester 2023 </p>
+        </section>
     </footer>
-
 </body>
 
 </html>

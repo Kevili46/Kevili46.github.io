@@ -100,3 +100,10 @@
     font-weight: 500;
     src: url(/fonts/GoogleSans/GoogleSansText.woff2) format("woff")
 }
+
+@font-face {
+    font-family: 'Google Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/GoogleMaterialIcons.woff2) format("woff")
+}

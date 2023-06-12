@@ -1,0 +1,175 @@
+.plans {
+    background-image: url(/images/graphics/Sphere_trueTrans.png);
+    background-repeat: no-repeat;
+    background-position: 130% 110%;
+    background-size: 60%;
+    width: 100svw;
+}
+
+.plan-intro {
+    margin-top: 60px;
+}
+
+.choose-period {
+    font-size: 18px;
+    width: 320px;
+    display: flex;
+    margin-bottom: 2em;
+    border-radius: .5em;
+    border: 1px solid var(--m-midgray);
+    background-color: white;
+}
+
+.choose-period p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+    font-weight: 500;
+    color: var(--m-gray);
+    width: 50%;
+    border: 1px solid transparent;
+    border-radius: .5em;
+    margin: 1px;
+    padding: .5em 1em;
+    cursor: pointer;
+    transition: color 200ms, background-color 200ms, border-color 200ms ease;
+}
+
+.choose-period p:not(.chosen-plan):hover {
+    background-color: var(--m-lightgray);
+}
+
+.choose-period .chosen-plan {
+    color: var(--m-blue);
+    border-color: var(--m-blue);
+    border-radius: .5em;
+    margin: 1px;
+    background-color: #4286f422;
+}
+
+.choose-period p span {
+    font-size: .9em;
+    color: inherit;
+    font-weight: 400;
+    text-align: center;
+}
+
+.abos {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 2em;
+    margin-inline: 5%;
+}
+
+.abo-box {
+    width: 264px;
+    height: auto;
+    box-shadow: 0 0 1em -.3em var(--m-gray);
+    border-radius: .5em;
+    color: #5f6368;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: .2em solid transparent;
+    position: relative;
+    background-color: white;
+}
+
+.recommended {
+    border-color: var(--m-blue);
+}
+
+.abo-box-head {
+    width: 90%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em repeat(3, 1fr);
+    border-bottom: 1px solid var(--m-midgray);
+    margin-top: 1em;
+}
+
+.abo-box-head>* {
+    justify-self: center;
+    align-self: center;
+}
+
+.abo-descr {
+    width: 90%;
+    margin-top: 1em;
+}
+
+.abo-box .abo-rec {
+    font-weight: 500;
+    font-size: .8em;
+}
+
+.abo-box .abo-name {
+    font-size: 2em;
+    grid-row-start: 2;
+}
+
+.abo-formals {
+    grid-row-start: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.abo-box .abo-price {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.abo-box .abo-period {
+    font-size: .8em;
+    font-weight: 400;
+    color: var(--m-gray);
+}
+
+.abo-box-head .btn-secondary,
+.recommended .cta {
+    grid-row-start: 4;
+    font-size: .8em;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.abo-descr {
+    display: flex;
+    flex-direction: column;
+}
+
+.abo-descr p {
+    font-size: .8em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.abo-descr ul {
+    list-style: none;
+    margin-bottom: 1.5em;
+}
+
+.abo-descr li {
+    display: flex;
+    align-items: center;
+    margin: .5em 0;
+}
+
+.abo-descr li span {
+    font-size: .8em;
+    font-weight: 400;
+}
+
+i {
+    font-family: 'Google Material Icons';
+    font-style: normal;
+    color: var(--m-blue);
+    padding: .2em .5em;
+}
