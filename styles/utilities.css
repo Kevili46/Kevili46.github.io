@@ -147,7 +147,7 @@ p {
     }
 
     .custom-section {
-        margin-bottom: clamp(1px, 8em, 120px);
+        margin-bottom: clamp(1px, 8em, 100px);
     }
 }
 

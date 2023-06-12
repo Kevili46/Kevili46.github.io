@@ -1,13 +1,13 @@
 .plans {
     background-image: url(/images/graphics/Sphere_trueTrans.png);
     background-repeat: no-repeat;
-    background-position: 130% 110%;
+    background-position: 130% 100%;
     background-size: 60%;
     width: 100svw;
 }
 
 .plan-intro {
-    margin-top: 60px;
+    margin: 60px 10% 1em 10%;
 }
 
 .choose-period {
