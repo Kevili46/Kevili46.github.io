@@ -1,8 +1,11 @@
 .plans {
     background-image: url(/images/graphics/Sphere_trueTrans.png);
     background-repeat: no-repeat;
-    background-position: 130% 100%;
+    background-position: 125% 100%;
     background-size: 60%;
+}
+
+.pricings {
     width: 100svw;
 }
 
