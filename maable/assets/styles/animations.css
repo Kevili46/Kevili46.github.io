@@ -1,0 +1,122 @@
+:root {
+    --t-animation: 800ms;
+}
+
+/* --------------------- INTRO ANIMATION RULES --------------------- */
+
+.loaded .rolling #m-logo .yellow {
+    animation: var(--t-animation) blendY;
+}
+
+.loaded .rolling #m-logo .red {
+    animation: var(--t-animation) blendR;
+}
+
+.loaded .rolling #m-logo .blue {
+    animation: var(--t-animation) blendB;
+}
+
+.loaded .rolling #m-logo .green {
+    animation: var(--t-animation) blendG;
+}
+
+/* --------------------- UNDERLINE WHEN BLURRED --------------------- */
+.underline {
+    animation: 800ms underline 200ms linear forwards;
+}
+
+/* BLEND IN SINGLE COLOR FIELDS */
+
+@keyframes blendY {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 30px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blendR {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -30px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translate(0px, -30px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blendB {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -30px);
+    }
+
+    45% {
+        opacity: 0;
+        transform: translate(0px, -30px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blendG {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 30px);
+    }
+
+    70% {
+        opacity: 0;
+        transform: translate(0px, 30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+/* --------------------- UNDERLINE WITH COLORS --------------------- */
+@keyframes underline {
+    0% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, transparent 25% 100%) 1;
+    }
+
+    33.2% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, transparent 25% 100%) 1;
+    }
+
+    33.3% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, var(--m-red) 25% 50%, transparent 50% 100%) 1;
+    }
+
+    66.5% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, var(--m-red) 25% 50%, transparent 50% 100%) 1;
+    }
+
+    66.6% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, var(--m-red) 25% 50%, var(--m-yellow) 50% 75%, transparent 75% 100%) 1;
+    }
+
+    99.9% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, var(--m-red) 25% 50%, var(--m-yellow) 50% 75%, transparent 75% 100%) 1;
+    }
+
+    100% {
+        border-image: linear-gradient(90deg, var(--m-blue) 0 25%, var(--m-red) 25% 50%, var(--m-yellow) 50% 75%, var(--m-green) 75% 100%, transparent 100% 100%) 1;
+    }
+}
