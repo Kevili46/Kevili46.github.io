@@ -2,17 +2,17 @@ import { menuItems } from "./menuItems.js";
 
 const hoverAudio = [];
 for (let i = 0; i < 10; i++) {
-    hoverAudio.push(new Audio('/src/assets/sounds/hover.mp3'));
+    hoverAudio.push(new Audio('.../assets/sounds/hover.mp3'));
 }
 
 const selectAudio = [];
 for (let i = 0; i < 10; i++) {
-    selectAudio.push(new Audio('/src/assets/sounds/select.mp3'));
+    selectAudio.push(new Audio('.../assets/sounds/select.mp3'));
 }
 
 const deselectAudio = [];
 for (let i = 0; i < 10; i++) {
-    deselectAudio.push(new Audio('/src/assets/sounds/deselect.mp3'));
+    deselectAudio.push(new Audio('.../assets/sounds/deselect.mp3'));
 }
 
 export function handleAudio(action) {
